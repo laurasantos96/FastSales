@@ -8,4 +8,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    resolve: {
+        alias: {
+            '~bootstrap': Path2D.resolve(__dirname,'node_modules/bootstrap'),
+        }
+    },
 });
