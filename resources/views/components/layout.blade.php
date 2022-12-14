@@ -13,7 +13,7 @@
 </head>
 <body>
   <x-navbar />
-  {{$slot}}
+   {{$slot}} {{-- content o body x_layout--}}
   <x-footer />
   @vite(['resources/js/app.js'])
   {{$script ?? ''}}
