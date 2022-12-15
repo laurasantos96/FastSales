@@ -74,4 +74,4 @@
         </div>
     </div>
 </div>
-</x-layout>
+@endsection
