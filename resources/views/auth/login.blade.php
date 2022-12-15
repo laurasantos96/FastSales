@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>FastSales</x-slot>
+    <x-slot name='title'>FastSales - Login</x-slot>
 
 <div class="container-fluid">
     <div class="row justify-content-center">
