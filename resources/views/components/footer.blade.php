@@ -119,4 +119,8 @@
     </div>
     <!-- Copyright -->
   </footer>
+<<<<<<< HEAD
   <!-- Footer -->
+=======
+  <!-- Footer -->
+>>>>>>> 6f68937bb228f006e324fc1e9c884e319565d760
