@@ -1,6 +1,6 @@
 import _ from 'lodash';
 window._ = _;
-
+import * as logout from './logout'
 import 'bootstrap';
 
 /**
