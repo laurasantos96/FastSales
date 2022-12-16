@@ -7,6 +7,8 @@
   <link rel="icon" href="{{ asset('/img/icono.png') }}">
   <title> {{ $title ?? 'FastSales'}}</title>
 
+  @livewireStyles
+
   @vite(['resources/css/app.css'])
 
   {{ $style ?? ''}}
@@ -16,6 +18,7 @@
   <x-navbar />
    {{$slot}} {{-- content o body x_layout--}}
   <x-footer />
+  @livewireScripts
   @vite(['resources/js/app.js'])
   {{$script ?? ''}}
 </body>
