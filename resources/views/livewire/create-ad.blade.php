@@ -23,6 +23,16 @@
                 {{$message}}
             @enderror 
         </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Categoría:</label>
+            <select wire:model.defer ="category" class="form-control">
+                <option value=""> Seleccionar categoria</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id }}">{{$category->name}} </option>
+                @endforeach
+            </select>
+        </div>
         
         <div class="mb-3">
             <label for="body" class="form-label">Descripcion:</label>

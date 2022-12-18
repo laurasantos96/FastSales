@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Providers;
-
+use App\Models\Category;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use PhpParser\Node\Stmt\TryCatch;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        try {
+            $categories = Category::all();
+            View::share('categories',$categories);
+        } catch (\Throwable $th) {
+            dump("ALERT: Recuerda lanzar las migrations cuando acabes el clone");
+        }
     }
 }
