@@ -1,44 +1,42 @@
 <x-layout>
-   
-        <x-slot name='title'>FastSales- {{$category->name}} ads</x-slot> 
-        <div class="container text-center ">
-          <h1>Anuncios por Categoría:{{$category->name}}</h1>
-        </div>
-      <div class="row">
-        @forelse ($ads as $ad )
 
-        <div class="container-fluid" style="width: 80%;">
-          <img src="..." class="card-img-top" alt="en obra">
-          <div class="card-body">
-      
-            <h5 class="card-title">{{$ad->title}}</h5>
-            <h6 class="card-subtitle">{{$ad->price}}</h6>
-            <p class="card-text">{{$ad->body}}</p>
-            <div class="card-subtitle">
-              <a href="{{route('category.ads', $ad->category)}}">#{{$category->name}}</a>
-
-              <i>{{$ad->created_at->format('d/m/Y')}}</i>
+  
+    <x-slot name='title'>FastSales</x-slot>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Bienvenido a FastSales</h1>
             </div>
-
-            <div class="subtitle">
-              <small>{{$ad->user->name}}</small>
+        </div>
+        <div class="row">
+            @forelse($ads as $ad)
+            <div class="col-12 col-md-4">
+                <div class="card mb-5">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{$ad->title}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{$ad->price}}</h6>
+                        <p class="card-text"> {{$ad->body}}</p>
+                        <div class="card-subtitle mb-2">
+                            <strong><a href="#">#{{$ad->category->name}}</a></strong>
+                            <i>{{$ad->created_at->format('d/m/Y')}}</i>
+                        </div>
+                        <div class="card-subtitle mb-2">
+                            <small>{{ $ad->user->name }}</small>
+                        </div> 
+                        <a href="#" class="btn btn-primary">Mostrar Más</a>
+                    </div>
+                </div>
             </div>
-
-            <a href="#" class="btn btn-primary">Mostrar Más</a>
-           
-            
-          </div>
+            @empty
+            <div class="col-12">
+                  <h2>Uyy.. parece que no hay nada</h2>
+                  <a href="{{route('ads.create')}}" class="btn btn-success">Vende tu primer objeto</a> o <a href="{{route('home')}}" class="btn btn-primary">Vuelve a la home</a> 
+              </div>
+            @endforelse
         </div>
-        @empty
-        <div class="col-12">
-          <h2>Uyy.... parece que no hay nada en esta categoría</h2>
-          <a href="{{route('ads.create')}}" class="btn btn-primary">Vuelve a la home</a>
-        </div>
-          
-        @endforelse
-        
-
-      </div>
+    </div>
+  
         
 
 
