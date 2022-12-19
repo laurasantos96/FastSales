@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot name='title'>{{('FastSales')}}</x-slot>
-  <div class="container-fluid" style="width: 18rem;">
+  <div class="container-fluid" style="width: 80%;">
     <img src="..." class="card-img-top" alt="en obra">
     <div class="card-body">
 

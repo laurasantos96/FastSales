@@ -1,7 +1,7 @@
 <x-layout>
    
-        {{-- <x-slot name='title'>Rapido - Homepage</x-slot>
-        <h1>Bienvenido a Rapido.es</h1> --}}
+        {{-- <x-slot name='title'>Rapido - Homepage</x-slot> 
+        <h1>Bienvenido a FastSales</h1>--}}
     
 <div class="container">
     <div class="row justify-content-center">

@@ -9,6 +9,9 @@ class Ad extends Model
 {
     protected $fillable = ['title', 'body', 'price'];
     use HasFactory;
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
     public function category(){
         return $this->belongsTo(Category::class);
     }
