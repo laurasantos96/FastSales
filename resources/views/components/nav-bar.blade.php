@@ -16,13 +16,28 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Categorías') }}</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false"></a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach ($categories as $category )
+                            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a></li>    
+                            @endforeach
+                        </ul>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Contacto') }}</a>
                     </li>
+
+                    
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
+
+
                     <!-- Authentication Links -->
                     @guest
                         @if (Route::has('login'))
