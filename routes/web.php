@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\PublicController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,4 @@ Route::get('/category/{category:name}/ads', [PublicController::class, 'adsByCate
 Auth::routes();
 
 Route::get('/ads/create', [AdController::class, 'create'])->name('ads.create');
+Route::get('/ads/{ad}', [AdController::class, 'show'])->name('ads.show');
