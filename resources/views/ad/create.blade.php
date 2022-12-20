@@ -6,7 +6,7 @@
 
       <h5 class="card-title">{{('Nuevo anuncio')}}</h5>
       <div class="">
-        <livewire:create-ad />
+        <livewire:create-ad/>
       </div>
     </div>
   </div>

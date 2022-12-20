@@ -7,7 +7,7 @@
   <link rel="icon" href="{{ asset('/img/icono.png') }}">
   <title> {{ $title ?? 'FastSales'}}</title>
 
-  @livewireStyles
+ @livewireStyles
 
   @vite(['resources/css/app.css'])
 
