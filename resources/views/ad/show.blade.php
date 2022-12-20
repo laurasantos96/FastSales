@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center w-100">
     <div class="col-md-8">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
