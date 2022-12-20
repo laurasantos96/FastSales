@@ -25,6 +25,6 @@ class MakeUserRevisor extends Command
         $user->is_revisor=true;
         $user->save();
         $this->info("El usuario $user->name ya es revisor");
-        // return Command::SUCCESS;
+       
     }
 }
