@@ -13,14 +13,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">{{ __('Inicio') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Categorías') }}</a>
-                    </li>
+                  
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false"></a>
-
+                        <a class="nav-link dropdown-toggle" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false" href="{{ route('login') }}">{{ __('Categorías') }}
+                     </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            
                             @foreach ($categories as $category )
                             <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a></li>    
                             @endforeach
