@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Providers;
+
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use PhpParser\Node\Stmt\TryCatch;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,9 +29,10 @@ class AppServiceProvider extends ServiceProvider
     {
         try {
             $categories = Category::all();
-            View::share('categories',$categories);
+            View::share('categories', $categories);
         } catch (\Throwable $th) {
             dump("ALERT: Recuerda lanzar las migrations cuando acabes el clone");
         }
+        Paginator::useBootstrapFive();
     }
 }

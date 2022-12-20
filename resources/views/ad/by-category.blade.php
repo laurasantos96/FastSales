@@ -36,4 +36,5 @@
             @endforelse
         </div>
     </div>
+    {{$ads->links()}}
 </x-layout>
