@@ -27,3 +27,5 @@ Route::get('/ads/create', [AdController::class, 'create'])->name('ads.create');
 Route::get('/ads/{ad}', [AdController::class, 'show'])->name('ads.show');
 Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.home');
 
+Route::patch('/revisor/ad/{ad}/accept', [RevisorController::class, 'acceptAd'])->name('revisor.ad.accept');
+Route::patch('/revisor/ad/{ad}/reject', [RevisorController::class, 'rejectAd'])->name('revisor.ad.reject');

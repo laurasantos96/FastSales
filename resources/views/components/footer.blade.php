@@ -1,5 +1,6 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+{{-- <footer class="text-center text-lg-start bg-light h-25 text-muted fixed-bottom"> --}}
+   {{-- hay que modificar la altura del footer(h-25) --}}
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->

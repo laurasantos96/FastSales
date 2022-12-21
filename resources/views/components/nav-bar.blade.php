@@ -35,8 +35,6 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
-
-
                     <!-- Authentication Links -->
                     @guest
                         @if (Route::has('login'))
@@ -61,11 +59,24 @@
                                   <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
-                                  
+                                <ul>
+                                  @if (Auth::user()->is_revisor)
+                                      <li>
+                                        <a class="dropdown-item" href="{{route('revisor.home')}} ">
+                                            Revisor
+                                            <span class="badge rounded-pill bg-danger">
+                                                {{\App\Models\Ad::ToBeRevisionedCount()}}
+                                            </span>
+                                        </a>
+                                      </li>
+                                  @endif
+                            <li>
                                 <a class="dropdown-item" href="#" id="logoutBtn">{{ __('Salir') }}
                                 </a>
+                            </li>    
                             </div>
                         </li>
+                    </ul>
                     @endguest
                 </ul>
             </div>
