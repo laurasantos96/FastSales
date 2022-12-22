@@ -16,7 +16,14 @@
 </head>
 <body>
   <x-navbar />
+
+  @if (session()->has('message'))
+    <x-alert :type="session('message')['type']" :message="session('message')['text']"></x-alert>
+  @endif
+
    {{$slot}} {{-- content o body x_layout--}}
+
+   
   <x-footer />
   @livewireScripts
   @vite(['resources/js/app.js'])
