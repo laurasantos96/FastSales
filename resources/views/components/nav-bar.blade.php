@@ -29,7 +29,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Contacto') }}</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('revisor.become') }}">{{ __('Work with us') }}</a>
+                    </li>
                     
                 </ul>
 

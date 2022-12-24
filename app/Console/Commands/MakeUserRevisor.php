@@ -7,7 +7,8 @@ use Illuminate\Console\Command;
 class MakeUserRevisor extends Command
 {
     
-    protected $signature = 'fast:makeUserRevisor';
+    protected $signature = 'fast:makeUserRevisor{email}';
+    // con email entre llaves hacemos llamada a un parametro de artisan
     protected $description = 'Asigna el rol de revisor a un usuario';
 
     public function __construct()
@@ -16,8 +17,10 @@ class MakeUserRevisor extends Command
     }
     public function handle()
     {
-        $email=$this->ask("Introducir el correo del usuario");
-        $user=User::where('email',$email)->first();
+        // $email=$this->ask("Introducir el correo del usuario");
+        // $user=User::where('email',$email)->first();  --- hay que llamarlo asi : php artisan fast:makeUserRevisor
+        $user = User::where('email',$this->argument('email'))->first();
+        // php artisan fast:makeUserRevisor claudia.iacob@hotmail.com --- hay que llamarlo asi ahora
         if (!$user) {
             $this->error("Usuario no encontrado");
             return;
