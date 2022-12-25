@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class MakeUserRevisor extends Command
 {
     
-    protected $signature = 'fast:makeUserRevisor{email}';
+    protected $signature = 'fast:makeUserRevisor {email}';
     // con email entre llaves hacemos llamada a un parametro de artisan
     protected $description = 'Asigna el rol de revisor a un usuario';
 

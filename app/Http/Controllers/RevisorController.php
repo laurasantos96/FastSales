@@ -45,7 +45,7 @@ class RevisorController extends Controller
     }
     public function makeRevisor(User $user)
     {
-        Artisan::call('fast.makeUserRevisor',['email'=>$user->email]);
+        Artisan::call('fast:makeUserRevisor',['email' => $user->email]);
         return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud acceptada con éxito,gracias.']);
     }
 }
