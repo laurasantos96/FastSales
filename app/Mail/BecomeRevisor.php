@@ -22,7 +22,7 @@ class BecomeRevisor extends Mailable
 
     public function build()
     {
-        return $this->user->from('fast.revisor@noreplay.es')->view('mail.become-revisor');
+        return $this->from('fast.revisor@noreplay.es')->view('mail.become-revisor');
     }
     /**
      * Get the message envelope.
@@ -31,22 +31,20 @@ class BecomeRevisor extends Mailable
      */
     public function envelope()
     {
-        return new Envelope(
-            subject: 'Become Revisor',
-        );
+        return new Envelope(subject: 'Become Revisor');
     }
 
-    /**
+    /* *
      * Get the message content definition.
      *
      * @return \Illuminate\Mail\Mailables\Content
      */
-    public function content()
+    /*public function content()
     {
         return new Content(
             view: 'view.name',
         );
-    }
+    }*/
 
     /**
      * Get the attachments for the message.

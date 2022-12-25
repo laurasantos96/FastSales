@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Artisan;
 class RevisorController extends Controller
 {
 
-    public function __construct()
+    /* public function __construct()
     {
         $this->middleware('isRevisor');
-    }
+    } */
 
     public function index()
     {
