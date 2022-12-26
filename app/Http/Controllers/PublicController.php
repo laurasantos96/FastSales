@@ -19,4 +19,10 @@ class PublicController extends Controller
         $ads = $category->ads()->where('is_accepted', true)->latest()->paginate(6);
         return view('ad.by-category', compact('category', 'ads'));
     }
+
+    public function setLocale($locale)
+    {
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }

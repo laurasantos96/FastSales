@@ -38,6 +38,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
+                  
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
@@ -51,16 +52,18 @@
                             </li>
                         @endif
                     @else
-                    <a role="button" href="{{ route ('ads.create') }}" >Crear nuevo anuncio</a>
+                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2">Crear anuncio</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
+                            
                           
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                   <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
+                                
                                 <ul>
                                   @if (Auth::user()->is_revisor)
                                       <li>
@@ -77,6 +80,21 @@
                                 </a>
                             </li>    
                             </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">
+                                    <x-locale lang="es" country="es"></x-locale>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">
+                                    <x-locale lang="us" country="us"></x-locale>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">
+                                    <x-locale lang="it" country="it"></x-locale>
+                                </a>
+                            </li>
                         </li>
                     </ul>
                     @endguest
