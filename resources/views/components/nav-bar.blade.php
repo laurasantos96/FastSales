@@ -80,24 +80,21 @@
                                 </a>
                             </li>    
                             </div>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <x-locale lang="es" country="es"></x-locale>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <x-locale lang="us" country="us"></x-locale>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <x-locale lang="it" country="it"></x-locale>
-                                </a>
-                            </li>
+                          
                         </li>
                     </ul>
                     @endguest
+                        <a class="nav-link me-2" href="">
+                            <x-locale lang="es" country="es"></x-locale>
+                        </a>
+               
+                        <a class="nav-link me-2" href="">
+                            <x-locale lang="us" country="us"></x-locale>
+                        </a>
+                  
+                        <a class="nav-link" href="">
+                            <x-locale lang="it" country="it"></x-locale>
+                        </a>                
                 </ul>
             </div>
         </div>
