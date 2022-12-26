@@ -11,7 +11,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('Inicio') }}</a>
+                        <a class="nav-link nav_letra" href="{{ route('home') }}">{{ __('Inicio') }}</a>
                     </li>
                   
 
@@ -21,7 +21,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             
                             @foreach ($categories as $category )
-                            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a></li>    
+                            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{__($category->name)}}</a></li>    
                             @endforeach
                         </ul>
                     </li>
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('revisor.become') }}">{{ __('Work with us') }}</a>
+                        <a class="nav-link" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
                     
                 </ul>
@@ -52,7 +52,7 @@
                             </li>
                         @endif
                     @else
-                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2">Crear anuncio</a>
+                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2">{{__('Crear anuncio')}}</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}

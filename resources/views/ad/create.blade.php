@@ -4,7 +4,7 @@
     <img src="..." class="card-img-top" alt="en obra">
     <div class="card-body">
 
-      <h5 class="card-title">{{('Nuevo anuncio')}}</h5>
+      <h5 class="card-title">{{__('Nuevo anuncio')}}</h5>
       <div class="">
         <livewire:create-ad/>
       </div>

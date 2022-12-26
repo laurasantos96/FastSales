@@ -9,7 +9,7 @@
 
  @livewireStyles
 
-  @vite(['resources/css/app.css'])
+  @vite(['resources/css/app.css','resources/css/mi_css.css'])
 
   {{ $style ?? ''}}
 
