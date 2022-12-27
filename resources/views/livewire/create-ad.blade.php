@@ -50,6 +50,23 @@
             <p class="text-danger mt-2">{{$message}}</p>
             @enderror
         </div>
+        @if (!empty($images))
+            <div class="row">
+                <div class="col-12">
+                    <p>{{__('Vista previa')}}:</p>
+                    <div class="row">
+                        @foreach ($images as $key=>$image)
+                            <div class="col-12 col-md-4">
+                                <img src="{{$image->temporaryUrl()}}" alt="" class="img-fluid">
+                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Eliminar</button>
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
+            
+        @endif
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-warning mb-3">{{__('Crear')}}</button>
         </div>  
