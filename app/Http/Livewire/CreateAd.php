@@ -13,12 +13,13 @@ class CreateAd extends Component
 
 {
     use WithFileUploads;
+
     public $title;
     public $body;
     public $price;
     public $category;
     public $images = [];
-    public $temporry_images;
+    public $temporary_images;
     public $image;
 
     protected $rules = [
@@ -66,7 +67,7 @@ class CreateAd extends Component
     }
 
     public function updatedTemporaryImages(){
-        if($this->validate ([
+        if($this->validate([
             'temporary_images.*'=>'image|max:2048'
 
         ])){
