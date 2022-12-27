@@ -64,4 +64,15 @@ class CreateAd extends Component
     {
         return view('livewire.create-ad');
     }
+
+    public function updatedTemporaryImages(){
+        if($this->validate ([
+            'temporary_images.*'=>'image|max:2048'
+
+        ])){
+            foreach ($this-> temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
 }

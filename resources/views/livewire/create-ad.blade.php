@@ -44,9 +44,15 @@
                 
             @enderror
         </div>
+        <div class="mb-3">
+            <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror">
+            @error('temporary_images.*')
+            <p class="text-danger mt-2">{{$message}}</p>
+            @enderror
+        </div>
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-warning mb-3">{{__('Crear')}}</button>
-          </div>  
+        </div>  
         
     </form> 
     
