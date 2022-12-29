@@ -3,14 +3,14 @@
     <div class="col-md-8">
     <div id="adImage" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        @for ($i = 0; $i < $ad->image()->count(); $i++)
+        @for ($i = 0; $i < $ad->images()->count(); $i++)
         <button type="button" data-bs-target="#adImage" data-bs-slide-to="{{$i}}" class="@if ($i==0) active @endif" aria-current="true" aria-label="Slide {{$i + 1}}"></button>
         @endfor
       </div>
       <div class="carousel-inner">
-        @foreach ($ad->image as $image)
+        @foreach ($ad->images as $image)
            <div class="carousel-item @if ($loop->first) active @endif">
-          <img src="{{Storage::url($image()->path)}}" class="d-block" alt="...">
+          <img src="{{Storage::url($image->path)}}" class="d-block" alt="...">
         </div>
         @endforeach
       </div>

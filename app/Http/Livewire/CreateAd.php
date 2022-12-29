@@ -49,7 +49,7 @@ class CreateAd extends Component
         //creo el anuncio a partir de la categoria usando la relación y pasando los datos validados
         $ad = $category->ads()->create($validatedData);
         //vuelvo a guardar el anuncio pasando por la relación del usuario
-        Auth::user()->ads()->create($validatedData);
+        Auth::user()->ads()->save($ad);
         //guardo cada imagen en el db y en el storage
         if(count($this->images)){
             foreach ($this->images as $image){

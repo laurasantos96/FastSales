@@ -12,8 +12,8 @@
             @forelse($ads as $ad)
             <div class="col-12 col-md-4">
                 <div class="card mb-5" style="width: 80%;">
-                  @if ($ad->image()->count() > 0)
-                     <img src="{{Storage::url($ad->image()->first()->path)}}" class="card-img-top" alt="...">
+                  @if ($ad->images()->count() > 0)
+                     <img src="{{Storage::url($ad->images()->first()->path)}}" class="card-img-top" alt="...">
                   @else
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
                   @endif
