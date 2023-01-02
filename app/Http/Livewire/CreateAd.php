@@ -7,7 +7,8 @@ use Livewire\Component;
 
 use App\Models\Category;
 use App\Jobs\ResizeImage;
-use Spatie\Backtrace\File;
+//use Spatie\Backtrace\File; ESTA CLASS NO ERA
+use Illuminate\Support\Facades\File; // ESTA SÍ :)
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
@@ -81,6 +82,7 @@ class CreateAd extends Component
         $this->body = "";
         $this->category = "";
         $this->price = "";
+        $this->images = []; //FIXME: os faltaba limpiar este input
     }
 
     public function render()
