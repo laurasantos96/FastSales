@@ -18,7 +18,7 @@
         <div class="row">
           @forelse ($ad->images as $image )
           <div class="col-md-4">
-            <img src="{{Storage::url($image->path)}}" class="img-fluid" alt="...">
+            <img src="{{$image->getUrl(400,300)}}" class="img-fluid" alt="...">
           </div>
             
           @empty

@@ -13,7 +13,7 @@
             <div class="col-12 col-md-4">
                 <div class="card mb-5" style="width: 80%;">
                   @if ($ad->images()->count() > 0)
-                     <img src="{{Storage::url($ad->images()->first()->path)}}" class="card-img-top" alt="...">
+                     <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top" alt="...">
                   @else
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
                   @endif
