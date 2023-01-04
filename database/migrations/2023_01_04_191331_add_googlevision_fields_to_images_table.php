@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('ad_images', function (Blueprint $table) {
+        Schema::table('images', function (Blueprint $table) {
             //
             $table->text('labels')->nullable()->after('ad_id');
-            $table->text('adult')->nullable()->after('ad_id');
-            $table->text('spoof')->nullable()->after('ad_id');
-            $table->text('medical')->nullable()->after('ad_id');
-            $table->text('violence')->nullable()->after('ad_id');
-            $table->text('racy')->nullable()->after('ad_id');
+            $table->string('adult')->nullable()->after('ad_id');
+            $table->string('spoof')->nullable()->after('ad_id');
+            $table->string('medical')->nullable()->after('ad_id');
+            $table->string('violence')->nullable()->after('ad_id');
+            $table->string('racy')->nullable()->after('ad_id');
         });
     }
 
@@ -31,7 +31,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('ad_images', function (Blueprint $table) {
+        Schema::table('images', function (Blueprint $table) {
             //
             $table->dropColumn(['labels', 'adult', 'spoof', 'medical', 'violence', 'racy']);
         });
