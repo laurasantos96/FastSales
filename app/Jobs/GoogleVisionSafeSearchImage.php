@@ -3,11 +3,12 @@
 namespace App\Jobs;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use App\Models\Image;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class GoogleVisionSafeSearchImage implements ShouldQueue
@@ -37,12 +38,12 @@ class GoogleVisionSafeSearchImage implements ShouldQueue
         if(!$i){
             return;
         }
-    }
+    
     $image = file_get_contents(storage_path('app/public/'.$i->path));
-    putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credentials_json'));
+    putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credentials.json'));
 
     $imageAnnotator = new ImageAnnotatorClient();
-    $response = $imageAnnotator->sha1_fileSearchDetention($image);
+    $response = $imageAnnotator->safeSearchDetection($image);
     $imageAnnotator->close();
     $safe = $response->getSafeSearchAnnotation();
 
@@ -59,7 +60,7 @@ class GoogleVisionSafeSearchImage implements ShouldQueue
     $i->spoof = $likelihoodName[$spoof];
     $i->violence = $likelihoodName[$violence];
     $i->racy = $likelihoodName[$racy];
-    $i->adulsave ();
+    $i->save();
 
-
+    }
 }
