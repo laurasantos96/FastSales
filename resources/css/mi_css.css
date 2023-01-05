@@ -2,3 +2,22 @@
   color:rgb(78, 7, 145);
   font-weight: bold;
 }
+
+.VERY_UNLIKELY{
+  color: orange;
+}
+.UNLIKELY{
+  color: red;
+}
+.POSSIBLE{
+  color: yellow;
+}
+.LIKELY{
+  color: greenyellow;
+}
+.VERY_LIKELY{
+  color: green;
+}
+.UNKNOWN{
+  color: grey;
+}
