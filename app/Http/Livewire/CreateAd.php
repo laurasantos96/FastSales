@@ -2,16 +2,17 @@
 
 namespace App\Http\Livewire;
 
-use App\Jobs\GoogleVisionSafeSearchImage;
 use App\Models\Ad;
 use Livewire\Component;
-
 use App\Models\Category;
+
 use App\Jobs\ResizeImage;
-//use Spatie\Backtrace\File; ESTA CLASS NO ERA
-use Illuminate\Support\Facades\File; // ESTA SÍ :)
 use Livewire\WithFileUploads;
+//use Spatie\Backtrace\File; ESTA CLASS NO ERA
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\GoogleVisionSafeSearchImage;
+use Illuminate\Support\Facades\File; // ESTA SÍ :)
 
 class CreateAd extends Component
 
@@ -65,6 +66,7 @@ class CreateAd extends Component
                 ]);
                 dispatch(new ResizeImage($newImage->path,400,300));
                 dispatch(new GoogleVisionSafeSearchImage($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
                 //dispatch(new ResizeImage($newImage->path,500,500));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
