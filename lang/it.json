@@ -15,7 +15,7 @@
   "Nombre": "Nome",
   "Salir": "Logout",
   "Contraseña": "Password",
-  "Confirmar contraseña": "Conferma Pasword",
+  "Confirmar Contraseña": "Conferma Pasword",
   "Recordarme": "Ricordami",
   "Has olvidado tu contraseña?": "Hai dimenticato la password?",
   "Crear anuncio": "Crea un annuncio",
@@ -44,9 +44,11 @@
   "Anuncio creado correctamente": "Annuncio creato correttamente",
   "Revisor": "Moderatore",
   "Vista previa": "Anteprima",
-  "Elminar": "Eliminare",
+  "Eliminar": "Eliminare",
   "Anuncio aceptado": "Annuncio accettato",
   "Anuncio rechazado": "Annuncio rifiutado",
   "Solicitud enviada con éxito, gracias.": "Richiesta enviata corretamente, grazie.",
-  "Solicitud aceptada con éxito, gracias": "Richiesta accettata corretamente, grazie."
+  "Solicitud aceptada con éxito, gracias": "Richiesta accettata corretamente, grazie.",
+  "Elegir archivos": "Scegli il file",
+  "No se ha seleccionado ningún archivo": "Nessun file carigato"
 }

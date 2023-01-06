@@ -48,5 +48,7 @@
   "Anuncio aceptado": "Ad accepted",
   "Anuncio rechazado": "Ad denied",
   "Solicitud enviada con éxito,gracias.": "Request sent successfully, thanks.",
-  "Solicitud aceptada con éxito,gracias.": "Request accepted, thanks."
+  "Solicitud aceptada con éxito,gracias.": "Request accepted, thanks.",
+  "Elegir archivos": "Select file",
+  "No se ha seleccionado ningún archivo": "No file selected"
 }
