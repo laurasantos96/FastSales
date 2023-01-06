@@ -25,12 +25,12 @@
     </div>
   </div>
     <div class="col-12 col-md-6">
-      <div><b>{{__('Titulo:')}}</b>{{$ad->title}}</div>
-      <div><b>{{__('Precio:')}}</b>{{$ad->price}}</div>
-      <div><b>{{__('Descripcion:')}}</b>{{$ad->body}}</div>
-      <div><b>{{__('Publicado el:')}}</b>{{$ad->created_at->format('d/m/Y')}}</div>
-      <div><b>{{__('Por:')}}</b>{{$ad->user->name}}</div>
-      <div><a href="{{route('category.ads',$ad->category)}} ">#{{$ad->category->name}}</a></div>
+      <div><b>{{__('Titulo: ')}}</b>{{$ad->title}}</div>
+      <div><b>{{__('Precio: ')}}</b>{{$ad->price}}</div>
+      <div><b>{{__('Descripcion: ')}}</b>{{$ad->body}}</div>
+      <div><b>{{__('Publicado el: ')}}</b>{{$ad->created_at->format('d/m/Y')}}</div>
+      <div><b>{{__('Por: ')}}</b>{{$ad->user->name}}</div>
+      <div><a href="{{route('category.ads',$ad->category)}} ">#{{__($ad->category->name)}}</a></div>
       <div><a href="#" class="btn btn-success">{{__('Comprar')}}</a></div>
     </div>
   </div>

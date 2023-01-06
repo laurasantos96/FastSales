@@ -48,7 +48,7 @@
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                             </li>
                         @endif
                     @else
@@ -68,7 +68,7 @@
                                   @if (Auth::user()->is_revisor)
                                       <li>
                                         <a class="dropdown-item" href="{{route('revisor.home')}} ">
-                                            Revisor
+                                            {{__('Revisor')}}
                                             <span class="badge rounded-pill bg-danger">
                                                 {{\App\Models\Ad::ToBeRevisionedCount()}}
                                             </span>
