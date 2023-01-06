@@ -1,9 +1,9 @@
 <x-layout>
-  <x-slot name='title'>FastSales - Revisor Home</x-slot>
+  <x-slot name='title'>FastSales - {{__('Revisor')}} Home</x-slot>
 @if ($ad)
   
 
-<div class="container-fluid my-5 py-5">
+<div class="container-fluid my-2 py-2">
  <div class="row">
   <div class="col-12 col-md-8 offset-md-2">
   <div class="card-header">
@@ -17,7 +17,7 @@
       <div class="col-9">
         <div class="row">
           @forelse ($ad->images as $image )
-          <div class="row mb-4">
+          <div class="row mb-2">
               <div class="col-md-4">
                 <img src="{{$image->getUrl(400,300)}}" class="img-fluid" alt="...">
               </div>

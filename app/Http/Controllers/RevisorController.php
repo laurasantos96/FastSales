@@ -31,7 +31,7 @@ class RevisorController extends Controller
     public function acceptAd(Ad $ad)
     {
         $ad->setAccepted(true);
-        return redirect()->back()->withMessage(['type' => 'success', 'text' => 'Anuncio acceptado']);
+        return redirect()->back()->withMessage(['type' => 'success', 'text' => 'Anuncio aceptado']);
     }
     public function rejectAd(Ad $ad)
     {
@@ -46,6 +46,6 @@ class RevisorController extends Controller
     public function makeRevisor(User $user)
     {
         Artisan::call('fast:makeUserRevisor',['email' => $user->email]);
-        return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud acceptada con éxito,gracias.']);
+        return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud aceptada con éxito,gracias.']);
     }
 }

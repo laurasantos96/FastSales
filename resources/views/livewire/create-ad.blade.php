@@ -10,7 +10,7 @@
             <label for="title" class="form-label mt-1">{{__('Titulo:')}}</label>
             <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror"> 
             @error('title')
-            {{$message}}
+            {{__($message)}}
             @enderror
         </div>
         
@@ -20,7 +20,7 @@
                 
             @enderror"> 
             @error('price')
-                {{$message}}
+            {{__($message)}}
             @enderror 
         </div>
 
@@ -40,14 +40,14 @@
                 
             @enderror"></textarea>  
             @error('body')
-            {{$message}}
+            {{__($message)}}
                 
             @enderror
         </div>
         <div class="mb-3">
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror">
             @error('temporary_images.*')
-            <p class="text-danger mt-2">{{$message}}</p>
+            <p class="text-danger mt-2">{{__($message)}}</p>
             @enderror
         </div>
         @if (!empty($images))
@@ -58,7 +58,7 @@
                         @foreach ($images as $key=>$image)
                             <div class="col-12 col-md-4">
                                 <img src="{{$image->temporaryUrl()}}" alt="" class="img-fluid">
-                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">Eliminar</button>
+                                <button type="button" class="btn btn-danger" wire:click="removeImage({{$key}})">{{__('Eliminar')}}</button>
                             </div>
                         @endforeach
                     </div>
