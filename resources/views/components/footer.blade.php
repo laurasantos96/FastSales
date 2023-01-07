@@ -1,15 +1,19 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted ">
-   
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="mb-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
+<footer class="mi_footer text-center fixed-bottom">
+     <div class="d-none d-lg-block">
+        <span class="me-3 mi_letra">Get connected with us on social networks:</span>
+          <i class="bi bi-facebook me-3"></i>
+          <i class="bi bi-whatsapp me-3"></i>
+          <i class="bi bi-discord me-3"></i>
+          <i class="bi bi-linkedin"></i>
       </div>
+    <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+      <!-- Left -->
+    
 
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center w-100 mi_letra">
+      © 2022 Copyright: FastSales
+      {{-- <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a> --}}
     </div>
     </section>
   </footer>

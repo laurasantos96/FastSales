@@ -1,8 +1,15 @@
 .nav_letra{
-  color:rgb(78, 7, 145);
-  font-weight: bold;
+  font-family:'Trebuchet MS';
+  color: rgb(105, 62, 16);
+  font-size: large;
 }
-
+.titulo_letra{
+  color: rgb(105, 62, 16);
+}
+body{
+  background-color:rgb(250, 234, 209);
+  padding-bottom: 5%;
+}
 .VERY_UNLIKELY{
   color: orange;
 }
@@ -20,4 +27,27 @@
 }
 .UNKNOWN{
   color: grey;
+}
+.mi_footer{
+  color:rgb(3, 3, 3);
+  background: linear-gradient(rgba(250, 234, 209, 0.667), rgb(167, 128, 64));
+}
+.mi_nav{
+  background: linear-gradient(rgba(167, 128, 64, 0.975),rgba(250, 234, 209, 0.667));
+}
+.mi_card{
+  background: transparent;
+  margin-top: 20px;
+  border: solid 3px rgb(224, 199, 158);
+  border-radius: 15px;
+}
+.mi_letra{
+  font-family: 'Lucida Grande';
+  font-size: large;
+  color: rgb(105, 62, 16);
+}
+.mi_boton{
+  border-radius: 30px;
+  border: 2px solid rgb(105, 62, 16);
+  background: transparent;
 }

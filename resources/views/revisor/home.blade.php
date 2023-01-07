@@ -3,7 +3,7 @@
 @if ($ad)
   
 
-<div class="container-fluid my-2 py-2">
+<div class="container-fluid mt-5 pt-5">
  <div class="row">
   <div class="col-12 col-md-8 offset-md-2">
   <div class="card-header">
@@ -124,6 +124,6 @@
 </div>
 </div>
 @else
-  <h3 class="text-center">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
+  <h3 class="text-center mt-5 pt-5 titulo_letra">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
 @endif
 </x-layout>

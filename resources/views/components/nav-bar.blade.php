@@ -1,7 +1,7 @@
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar mi_nav navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset ('/img/icono.png')}}" style="height: 3.5em">{{ config('app.name', 'FastSales') }}
+            <img src="{{ asset ('/img/icono.png')}}" style="height: 3.5em" class="fw-bold">{{ config('app.name', 'FastSales') }}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -16,21 +16,21 @@
                   
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false" href="{{ route('login') }}">{{ __('Categorías') }}
+                        <a class="nav-link dropdown-toggle nav_letra" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false" href="{{ route('login') }}">{{ __('Categorías') }}
                      </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             
                             @foreach ($categories as $category )
-                            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{__($category->name)}}</a></li>    
+                            <li><a class="dropdown-item nav_letra" href="{{route('category.ads',$category)}}">{{__($category->name)}}</a></li>    
                             @endforeach
                         </ul>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Contacto') }}</a>
+                        <a class="nav-link nav_letra" href="{{ route('login') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+                        <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
                     
                 </ul>
@@ -42,17 +42,17 @@
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="nav-link nav_letra" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrate') }}</a>
+                                <a class="nav-link nav_letra" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                             </li>
                         @endif
                     @else
-                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2">{{__('Crear anuncio')}}</a>
+                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra">{{__('Crear anuncio')}}</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}

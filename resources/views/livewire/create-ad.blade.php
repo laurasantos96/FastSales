@@ -1,4 +1,4 @@
-<div>
+<div class="mt-5 pt-5">
     @if (session()->has('message'))
     <div class="alert alert-success" role="alert">
         {{session('message')}}
@@ -36,13 +36,13 @@
         
         <div class="mb-3">
             <label for="body" class="form-label">{{__('Descripcion:')}}</label>
-            <textarea wire:model="body" rows="5" class="form-control @error('body') is-invalid
-                
+            <textarea wire:model="body" rows="5" class="form-control @error('body') is-invalid               
             @enderror"></textarea>  
             @error('body')
             {{__($message)}}
                 
             @enderror
+            
         </div>
         <div class="mb-3">
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror">
@@ -50,6 +50,7 @@
             <p class="text-danger mt-2">{{__($message)}}</p>
             @enderror
         </div>
+
         @if (!empty($images))
             <div class="row">
                 <div class="col-12">
