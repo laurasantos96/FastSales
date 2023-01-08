@@ -10,10 +10,10 @@
         </div>
         <div class="row">
             @forelse($ads as $ad)
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <div class="card mb-2 mi_card" style="width: 80%;">
                   @if ($ad->images()->count() > 0)
-                     <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top" alt="...">
+                     <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top mi_img" alt="...">
                   @else
                   <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
                   @endif
@@ -29,14 +29,14 @@
                         <div class="card-subtitle mb-2">
                             <small>{{ $ad->user->name }}</small>
                         </div> 
-                        <a href="{{route("ads.show",$ad)}}" class="btn btn-primary">{{__('Mostrar Más')}}</a>
+                        <a href="{{route("ads.show",$ad)}}" class="text-decoration-none mi_letra mi_boton">{{__('Mostrar Más')}}</a>
                     </div>
                 </div>
             </div>
             @empty
             <div class="col-12">
                   <h2>{{__('Uyy.. parece que no hay nada')}}</h2>
-                  <a href="{{route('ads.create')}}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a> {{__('o')}} <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}}</a> 
+                  <a href="{{route('ads.create')}}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a> {{__('o')}} <a href="{{route('home')}}" class="mi_boton">{{__('Vuelve a la home')}}</a> 
               </div>
             @endforelse
         </div>
