@@ -1,4 +1,4 @@
-<div class="mt-5 pt-5">
+<div class="mt-3">
     @if (session()->has('message'))
     <div class="alert alert-success" role="alert">
         {{session('message')}}
