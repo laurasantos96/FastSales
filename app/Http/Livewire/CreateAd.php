@@ -9,8 +9,10 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 //use Spatie\Backtrace\File; ESTA CLASS NO ERA
+use Illuminate\Support\Facades\Bus;
 use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\GoogleVisionRemoveFaces;
 use App\Jobs\GoogleVisionSafeSearchImage;
 use Illuminate\Support\Facades\File; // ESTA SÍ :)
 
@@ -62,11 +64,15 @@ class CreateAd extends Component
             $newFileName = "ads/$ad->id";
             foreach ($this->images as $image){
                 $newImage = $ad->images()->create([
-                    'path'=>$image->store($newFileName, 'public')
+                    'path'=>$image->store($newFileName,'public')
                 ]);
-                dispatch(new ResizeImage($newImage->path,400,300));
-                dispatch(new GoogleVisionSafeSearchImage($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                Bus::chain([
+                new GoogleVisionRemoveFaces($newImage->id),
+                new ResizeImage($newImage->path,400,300),
+                new GoogleVisionSafeSearchImage($newImage->id),
+                new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch();
+                
                 //dispatch(new ResizeImage($newImage->path,600,600));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

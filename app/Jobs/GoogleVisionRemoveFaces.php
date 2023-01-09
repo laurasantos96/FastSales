@@ -2,13 +2,15 @@
 
 namespace App\Jobs;
 
-use Illuminate\Bus\Queueable;
 use App\Models\Image;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
+use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class GoogleVisionRemoveFaces implements ShouldQueue
@@ -46,10 +48,24 @@ class GoogleVisionRemoveFaces implements ShouldQueue
 
         foreach ($faces as $face) {
             $vertices = $face->getBoundingPoly()->getVertices();
-            echo "face\n";
+            $bounds = [];
+            //guardar los puntos del poligono de la cara en parejas de x , y
             foreach ($vertices as $vertex) {
-                echo $vertex->getX() . "," . $vertex->getY() . "\n";
+                $bounds[] = [$vertex->getX(),$vertex->getY()];
             }
+            //calcular altura y anchura
+            $w = $bounds[2][0] - $bounds[0][0];
+            $h = $bounds[2][1] - $bounds[0][1];
+            //cargar la imagen
+            $image = SpatieImage::load($srcPath);
+            // modificar la imagen con SpatieImage
+            $image->watermark(base_path('resource/images/smile.png'))
+                  ->watermarkPosition('top-left')
+                  ->watermarkPadding($bounds[0][0],$bounds[0][1])
+                  ->watermarkWidth($w,Manipulations::UNIT_PIXELS)
+                  ->watermarkHeight($h,Manipulations::UNIT_PIXELS)
+                  ->watermarkFit(Manipulations::FIT_STRETCH);
+            $image->save($srcPath);
         }
     }
 }
