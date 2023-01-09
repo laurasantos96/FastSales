@@ -36,9 +36,9 @@ class GoogleVisionRemoveFaces implements ShouldQueue
         if (!$i) {
             return;
         }
-        $srcPath = storage_path('/app/public' . $i->path);
+        $srcPath = storage_path('/app/public/'.$i->path);
         $image = file_get_contents($srcPath);
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credentials.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credentials.json'));
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->faceDetection($image);
         $imageAnnotator->close();
