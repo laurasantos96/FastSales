@@ -29,7 +29,7 @@
                 Racy : <i class="bi bi-circle-fill {{$image->racy}}"></i>[{{$image->racy}}] <br>
                 <br>
                 <b>{{__('Labels')}}</b><br>
-                @foreach ($image->getLabels() as $label )
+                @foreach ($image->labels as $label )
                   <a href="#" class="btn btn-info btn-sm m-1">{{__($label)}}</a>
                 @endforeach
                 <br>
