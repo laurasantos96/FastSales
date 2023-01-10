@@ -4,7 +4,7 @@
     <div id="adImage" class="carousel slide carousel-fade mi_carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
         @for ($i = 0; $i < $ad->images()->count(); $i++)
-        <button type="button" data-bs-target="#adImage" data-bs-slide-to="{{$i}}" class="@if ($i==0) active @endif" aria-current="true" aria-label="Slide {{$i + 1}}"></button>
+        <button type="button boton_carousel" data-bs-target="#adImage" data-bs-slide-to="{{$i}}" class="@if ($i==0) active @endif" aria-current="true" aria-label="Slide {{$i + 1}}"></button>
         @endfor
       </div>
       <div class="carousel-inner">
