@@ -59,7 +59,7 @@ class GoogleVisionRemoveFaces implements ShouldQueue
             //cargar la imagen
             $image = SpatieImage::load($srcPath);
             // modificar la imagen con SpatieImage
-            $image->watermark(base_path('resource/images/smile.png'))
+            $image->watermark(base_path('resources/images/smile.png'))
                   ->watermarkPosition('top-left')
                   ->watermarkPadding($bounds[0][0],$bounds[0][1])
                   ->watermarkWidth($w,Manipulations::UNIT_PIXELS)
