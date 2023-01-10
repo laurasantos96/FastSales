@@ -29,7 +29,7 @@
                         <div class="card-subtitle mb-2">
                             <small>{{ $ad->user->name }}</small>
                         </div> 
-                        <a href="{{route("ads.show",$ad)}}" class="text-decoration-none mi_letra mi_boton">{{__('Mostrar Más')}}</a>
+                        <a href="{{route("ads.show",$ad)}}" class="text-decoration-none nav_letra mi_boton">{{__('Mostrar Más')}}</a>
                     </div>
                 </div>
             </div>
