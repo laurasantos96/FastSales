@@ -64,15 +64,14 @@ class CreateAd extends Component
             $newFileName = "ads/$ad->id";
             foreach ($this->images as $image){
                 $newImage = $ad->images()->create([
-                    'path'=>$image->store($newFileName,'public')
+                    'path'=>$image->store($newFileName, 'public')
                 ]);
                 Bus::chain([
-                new GoogleVisionRemoveFaces($newImage->id),
-                new ResizeImage($newImage->path,400,300),
-                new GoogleVisionSafeSearchImage($newImage->id),
-                new GoogleVisionLabelImage($newImage->id)
-                ])->dispatch();
-                
+                    new GoogleVisionRemoveFaces($newImage->id),
+                    new ResizeImage($newImage->path,400,300),
+                    new GoogleVisionSafeSearchImage($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                    ])->dispatch();
                 //dispatch(new ResizeImage($newImage->path,600,600));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

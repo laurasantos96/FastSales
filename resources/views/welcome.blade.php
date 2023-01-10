@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center mt-5 pt-5 titulo_letra">{{__('Bienvenido a FastSales')}}</h1>
+                <h1 class="text-center titulo_letra">{{__('Bienvenido a FastSales')}}</h1>
             </div>
         </div>
         <div class="row">

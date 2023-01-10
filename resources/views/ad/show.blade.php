@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="row mt-5 pt-5">
+  <div class="row">
     <div class="d-flex justify-content-center">
     <div id="adImage" class="carousel slide carousel-fade mi_carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -24,7 +24,7 @@
       </button>
     </div>
   </div>
-  <div class="row mt-5 d-flex justify-content-center">
+  <div class="row d-flex justify-content-center mt-5">
     <div class="col-12 col-md-6">
       <div><b>{{__('Titulo: ')}}</b>{{$ad->title}}</div>
       <div><b>{{__('Precio: ')}}</b>{{$ad->price}}</div>

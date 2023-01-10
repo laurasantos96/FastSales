@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center titulo_letra mt-5 pt-5">{{__('Anuncios por categoria:')}} {{__($category->name)}}</h1>
+                <h1 class="text-center titulo_letra">{{__('Anuncios por categoria:')}} {{__($category->name)}}</h1>
             </div>
         </div>
         <div class="row mt-2">

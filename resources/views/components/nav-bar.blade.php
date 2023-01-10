@@ -1,7 +1,7 @@
     <nav class="navbar mi_nav navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset ('/img/icono.png')}}" style="height: 3.5em" class="fw-bold">{{ config('app.name', 'FastSales') }}
+            <a class="navbar-brand nav_letra fs-4" href="{{ url('/') }}">
+             <img src="{{ asset ('/img/icono.png')}}" style="height: 3.5em">{{'FastSales'}}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav_letra" href="{{ route('login') }}">{{ __('Contacto') }}</a>
+                        <a class="nav-link  nav_letra" href="{{ route('login') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+                        <a class="nav-link  nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
                     
                 </ul>
@@ -52,9 +52,9 @@
                             </li>
                         @endif
                     @else
-                    <a role="button" href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra">{{__('Crear anuncio')}}</a>
+                    <a href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra">{{__('Crear anuncio')}}</a>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle nav_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
                             
@@ -64,10 +64,10 @@
                                     @csrf
                                 </form>
                                 
-                                <ul>
+                                <ul class="list-unstyled">
                                   @if (Auth::user()->is_revisor)
                                       <li>
-                                        <a class="dropdown-item" href="{{route('revisor.home')}} ">
+                                        <a class="dropdown-item nav_letra" href="{{route('revisor.home')}} ">
                                             {{__('Revisor')}}
                                             <span class="badge rounded-pill bg-danger">
                                                 {{\App\Models\Ad::ToBeRevisionedCount()}}
@@ -76,7 +76,7 @@
                                       </li>
                                   @endif
                             <li>
-                                <a class="dropdown-item" href="#" id="logoutBtn">{{ __('Salir') }}
+                                <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
                                 </a>
                             </li>    
                             </div>

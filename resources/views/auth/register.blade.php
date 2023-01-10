@@ -1,7 +1,7 @@
 <x-layout>
 
 <x-slot name="title"> FastSales - Register</x-slot>
-<div class="container-fluid mt-5 pt-5">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mi_card">

@@ -1,14 +1,22 @@
 .nav_letra{
-  font-family:'Trebuchet MS';
-  color: rgb(105, 62, 16);
+  font-family:'Lucida Grande';
+  color: rgb(142, 91, 36);
   font-size: large;
+}
+
+.nav_letra:hover{
+  font-family: 'Lucida Grande';
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(122, 79, 33);
 }
 .titulo_letra{
   color: rgb(105, 62, 16);
 }
 body{
   background-color:rgb(250, 234, 209);
-  padding-bottom: 5%;
+  padding-bottom: 8%;
+  padding-top: 8%;
 }
 .VERY_UNLIKELY{
   color: orange;
@@ -43,11 +51,19 @@ body{
   box-shadow: 10px 3px 10px 3px rgb(202, 176, 133) inset;
   border-radius: 20px;
 }
-.mi_letra{
+.mi_a, .mi_a:link, .mi_a:visited, .mi_a:active{
   font-family: 'Lucida Grande';
   font-size: large;
-  color: rgb(105, 62, 16);
+  color: rgb(16, 105, 22);
+  text-decoration: none;
 }
+.mi_letra{
+  font-family:sans-serif;
+  font-size: medium;
+  color: rgb(122, 79, 33);
+  text-decoration: none;
+}
+
 .mi_boton{
   width: 110px;
   border-radius: 30px;

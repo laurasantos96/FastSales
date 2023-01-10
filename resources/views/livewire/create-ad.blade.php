@@ -1,4 +1,4 @@
-<div class="mt-3">
+<div class="">
     @if (session()->has('message'))
     <div class="alert alert-success" role="alert">
         {{session('message')}}
@@ -6,14 +6,15 @@
     @endif
     <form wire:submit.prevent="store">
         @csrf 
-        <div class="mb-3">
-            <label for="title" class="form-label mt-1 mi_letra">{{__('Titulo:')}}</label>
+        <div class="mb-3"> 
+            <h4 class="card-title titulo_letra text-center">{{__('Nuevo anuncio')}}</h4>
+            <label for="title" class="form-label mi_letra">{{__('Titulo:')}}</label>
             <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror"> 
             @error('title')
             {{__($message)}}
             @enderror
         </div>
-        
+       
         <div class="mb-3">
             <label for="price" class="form-label mi_letra">{{__('Precio:')}}</label>
             <input wire:model="price" type="number" class="form-control @error('price') is -invalid 
@@ -26,7 +27,7 @@
 
         <div class="mb-3">
             <label for="category" class="form-label mi_letra">{{__('Categoria:')}}</label>
-            <select wire:model.defer ="category" class="form-control">
+            <select wire:model.defer ="category" class="form-control mi_letra">
                 <option value="">{{__('Seleccionar categoría')}}</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{__($category->name)}}</option>
