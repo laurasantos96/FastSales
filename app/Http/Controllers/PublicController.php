@@ -25,4 +25,12 @@ class PublicController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $ads = Ad::search($q)
+             ->where('is_accepted',true)
+             ->get();
+             return view('ad.results', compact('q','ads'));
+    }
 }

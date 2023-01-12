@@ -27,12 +27,18 @@
                     <li class="nav-item">
                         <a class="nav-link  nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
-                    
+                    <li>
+                        <form action="{{route('search')}}" method="GET" role="search">
+                          <input type="search" name="q" placeholder="Search..." aria-label="Search">
+                          <button type="submit" class="mi_boton"><i class="bi bi-search"></i></button>
+                        </form>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
+                    
                   
                     @guest
                         @if (Route::has('login'))
