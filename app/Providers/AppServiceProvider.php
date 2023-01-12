@@ -34,5 +34,7 @@ class AppServiceProvider extends ServiceProvider
             dump("ALERT: Recuerda lanzar las migrations cuando acabes el clone");
         }
         Paginator::useBootstrapFive();
+        Paginator::defaultView('vendor.pagination.bootstrap-5');
+       
     }
 }

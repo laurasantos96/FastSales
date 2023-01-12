@@ -36,8 +36,9 @@
             @endforelse
         </div>
     </div>
-    {{-- <div class="pagination"> --}}
+    <div class="d-flex justify-content-center">
+        {{-- {{$ads->links()}}  --}}
         {{$ads->links()}} 
-    {{-- </div> --}}
+    </div>
    
 </x-layout>

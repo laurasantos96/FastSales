@@ -11,6 +11,42 @@
   color: rgb(122, 79, 33);
 }
 
+ .pagination ul,.pagination a.page-link{
+  background-color: transparent;
+  border: 1px solid rgb(122, 79, 33);
+}
+.page-link.active, .active > .page-link {
+  font-family:sans-serif;
+  color: rgb(78, 43, 5);
+  font-weight: bolder;
+  background: rgba(122, 79, 33, 0.445);
+  border-width: 1px;
+  border-color: rgb(122, 79, 33);
+}
+li.page-item.disabled, .disabled > .page-link,.pagination a.page-link {
+  font-family:sans-serif;
+  color: rgb(78, 43, 5);
+  font-weight: bolder;
+  background: transparent;
+  border-width: 1px;
+  border-color: rgb(122, 79, 33);
+}
+ .pagination a, .pagination span {
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid rgb(122, 79, 33);
+}
+a.page-link,.disabled > .page-link {
+  font-family:sans-serif;
+  color: rgb(78, 43, 5);
+  font-weight: bolder;
+  background: transparent;
+  border-width: 1px;
+  border-color: rgb(122, 79, 33);
+}
+.pag_left{
+  color: rgb(78, 43, 5);
+}
 .mi_letra{
   font-family:sans-serif;
   font-size: medium;
@@ -96,10 +132,10 @@ body{
   font-weight: bold;
   box-shadow: 2px 2px 10px 2px rgb(219, 33, 33) inset;
 }
-.page-item, .active{
+/* .page-item, .active{
   background-color: rgb(171, 252, 71);
   color: rgb(134, 58, 18);
-}
+} */
 .flag-icon{
   border-radius: 80%;
 }
