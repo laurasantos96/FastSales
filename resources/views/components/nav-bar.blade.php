@@ -10,11 +10,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link nav_letra" href="{{ route('home') }}">{{ __('Inicio') }}</a>
-                    </li>
-                  
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav_letra" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false" href="{{ route('login') }}">{{ __('Categorías') }}
                      </a>
