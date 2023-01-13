@@ -9,12 +9,12 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 //use Spatie\Backtrace\File; ESTA CLASS NO ERA
-use Illuminate\Support\Facades\Bus;
 use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
-use App\Jobs\GoogleVisionRemoveFaces;
 use App\Jobs\GoogleVisionSafeSearchImage;
 use Illuminate\Support\Facades\File; // ESTA SÍ :)
+use App\Jobs\GoogleVisionRemoveFaces;
+use Illuminate\Support\Facades\Bus;
 
 class CreateAd extends Component
 

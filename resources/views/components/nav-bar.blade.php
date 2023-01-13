@@ -29,8 +29,11 @@
                     </li>
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">
-                          <input type="search" name="q" placeholder="Search..." aria-label="Search">
-                          <button type="submit" class="mi_boton"><i class="bi bi-search"></i></button>
+                          
+                          <span class="input-group-text border-0" id="search-addon">
+                            <i class="bi bi-search"></i>
+                            <input type="search" name="q" class="mi_search" placeholder=" Search..." aria-label="Search">
+                          </span>
                         </form>
                     </li>
                 </ul>
@@ -39,7 +42,7 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
                     
-                  
+                    
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">

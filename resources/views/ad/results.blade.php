@@ -1,11 +1,11 @@
 <x-layout>
 
   
-    <x-slot name='title'>FastSales - {{__($category->name)}}</x-slot>
+    <x-slot name='title'>FastSales - busqueda</x-slot>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center titulo_letra">{{__('Anuncios por categoria:')}} {{__($category->name)}}</h1>
+                <h1 class="text-center titulo_letra">{{__('Resultados para:')}} {{$q}}</h1>
             </div>
         </div>
         <div class="row mt-2">
@@ -36,8 +36,8 @@
             @endforelse
         </div>
     </div>
-    <div class="d-flex justify-content-center">
-        {{-- {{$ads->links()}}  --}}
+       <div class="d-flex justify-content-center">
+    {{--  {{$ads->links()}}  --}}
         {{$ads->links()}} 
     </div>
    
