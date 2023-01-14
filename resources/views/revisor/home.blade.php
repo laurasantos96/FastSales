@@ -1,7 +1,27 @@
 <x-layout>
   <x-slot name='title' class="mt-5 pt-5">FastSales - {{__('Revisor')}} Home</x-slot>
+  @if (session()->has('message'))
+<script>
+Swal.fire({
+title: 'Ad accepted&&&',
+icon: 'success',
+showConfirmButton: false,
+timer: 1500
+})
+// se importa la clase en app.js
+  </script>
+  @else
+  <script>
+    Swal.fire({
+    title: 'Ad rejected',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 1500
+    })
+    // se importa la clase en app.js
+      </script>
+@endif
 @if ($ad)
-  
 
 <div class="container-fluid">
  <div class="row">
@@ -111,11 +131,13 @@
   </form>
 </div>
 <div class="col-2">
-  <form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
+   <form action="{{route('revisor.ad.accept',$ad)}}" method="POST">
       @csrf
       @method('PATCH')
-      <button type="submit" class="mi_boton">{{__('Aceptar')}}</button>
+      <button type="submit" class="mi_boton">{{__('Aceptar')}}       
+  </button>
   </form>
+  
 </div>
 </div>
 
@@ -125,5 +147,6 @@
 </div>
 @else
   <h3 class="text-center titulo_letra">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
+
 @endif
 </x-layout>

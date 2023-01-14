@@ -1,8 +1,17 @@
 <div class="">
     @if (session()->has('message'))
-    <div class="alert alert-success" role="alert">
+    {{-- <div class="alert alert-success" role="alert">
         {{session('message')}}
-    </div>
+    </div> --}}
+    <script>
+   Swal.fire({
+  title: 'Ad created successfully',
+  icon: 'success',
+  showConfirmButton: false,
+  timer: 1500
+})
+// se importa la clase en app.js
+      </script>
     @endif
     <form wire:submit.prevent="store">
         @csrf 
