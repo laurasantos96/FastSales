@@ -1,7 +1,7 @@
     <nav class="navbar mi_nav navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand nav_letra fs-4" href="{{ url('/') }}">
-             <img src="{{ asset ('/img/icono.png')}}" style="height: 3.5em">{{'FastSales'}}
+             <img src="{{ asset ('/img/icono.png')}}" style="height: 2em">{{'FastSales'}}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>

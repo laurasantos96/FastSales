@@ -106,7 +106,7 @@ body{
 .mi_boton{
   width: 110px;
   border-radius: 30px;
-  /* border: 2px solid rgb(122, 79, 33); */
+  border-color: transparent;
   background: transparent;
   padding: 8px;
   color: rgb(147, 105, 59);
@@ -132,7 +132,7 @@ body{
 .borrar_boton{
   width: 110px;
   border-radius: 25px;
-  border: 2px solid rgb(162, 25, 25);
+  border: transparent;
   background: transparent;
   padding: 8px;
   color: rgb(193, 27, 27);
