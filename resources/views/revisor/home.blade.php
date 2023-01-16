@@ -1,26 +1,6 @@
 <x-layout>
   <x-slot name='title' class="mt-5 pt-5">FastSales - {{__('Revisor')}} Home</x-slot>
-  @if (session()->has('message'))
-<script>
-Swal.fire({
-title: 'Ad accepted&&&',
-icon: 'success',
-showConfirmButton: false,
-timer: 1500
-})
-// se importa la clase en app.js
-  </script>
-  @else
-  <script>
-    Swal.fire({
-    title: 'Ad rejected',
-    icon: 'success',
-    showConfirmButton: false,
-    timer: 1500
-    })
-    // se importa la clase en app.js
-      </script>
-@endif
+
 @if ($ad)
 
 <div class="container-fluid">
@@ -49,9 +29,12 @@ timer: 1500
                 Racy : <i class="bi bi-circle-fill {{$image->racy}}"></i>[{{$image->racy}}] <br>
                 <br>
                 <b>{{__('Labels')}}</b><br>
-                @foreach ($image->labels as $label )
+                @forelse ($image->getLabels() as $label)
                   <a href="#" class="btn btn-info btn-sm m-1">{{__($label)}}</a>
-                @endforeach
+                @empty
+                  No labels
+                @endforelse
+                  
                 <br>
                 id : {{$image->id}} <br>
                 path : {{$image->path}} <br>

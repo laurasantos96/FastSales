@@ -22,7 +22,7 @@ class Image extends Model
 
     public function getLabels()
     {
-        return $this->labels ? $this->labels : [];
+        return $this->labels? $this->labels : [];
     }
     public static function getUrlByFilePath($filePath, $w = null, $h = null){
         if (!$w && !$h) {
