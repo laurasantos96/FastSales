@@ -86,17 +86,27 @@ body{
   background: linear-gradient(rgba(167, 128, 64, 0.975),rgba(250, 234, 209, 0.667));
 }
 .mi_card{
-  padding: 15px;
-  background: transparent;
+  padding: 20px;
+  background: rgba(250, 211, 147, 0.347);
   margin-top: 20px;
-  border: solid 3px rgb(252, 225, 180);
+  border-color: transparent;
+  /* border: solid 3px rgb(252, 225, 180); 
+  box-shadow: 10px 3px 10px 3px rgb(202, 176, 133) inset;*/
+  border-radius: 50px;
+}
+.mi_card:hover{
+  padding: 8px;
+  background: rgba(247, 217, 170, 0.518);
+  margin-top: 20px;
+  border-color: transparent;
+  border: solid 3px rgb(252, 225, 180); 
   box-shadow: 10px 3px 10px 3px rgb(202, 176, 133) inset;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .mi_boton{
   width: 110px;
   border-radius: 30px;
-  border: 2px solid rgb(122, 79, 33);
+  /* border: 2px solid rgb(122, 79, 33); */
   background: transparent;
   padding: 8px;
   color: rgb(147, 105, 59);

@@ -1,6 +1,6 @@
 <x-layout>
   <div class="row">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-3">
     <div id="adImage" class="carousel slide carousel-fade mi_carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
         @for ($i = 0; $i < $ad->images()->count(); $i++)
