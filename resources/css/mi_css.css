@@ -86,6 +86,7 @@ body{
   background: linear-gradient(rgba(167, 128, 64, 0.975),rgba(250, 234, 209, 0.667));
 }
 .mi_card{
+  transition: 0.5s ease-in-out;
   padding: 20px;
   background: rgba(250, 211, 147, 0.347);
   margin-top: 20px;
@@ -95,13 +96,15 @@ body{
   border-radius: 50px;
 }
 .mi_card:hover{
-  padding: 8px;
+  /* padding: 8px;
   background: rgba(247, 217, 170, 0.518);
   margin-top: 20px;
   border-color: transparent;
-  border: solid 3px rgb(252, 225, 180); 
-  box-shadow: 10px 3px 10px 3px rgb(202, 176, 133) inset;
-  border-radius: 10px;
+  border: solid 3px rgb(252, 225, 180);  */
+  transform: scale(1.05);
+  box-shadow: 10px 3px 10px 3px rgb(202, 176, 133);
+
+  /* border-radius: 10px; */
 }
 .mi_boton{
   width: 110px;
