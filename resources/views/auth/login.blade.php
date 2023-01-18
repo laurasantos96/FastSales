@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card mi_card">
+            <div class="card card_login">
                 <div class="card-header mi_letra">{{ __('Entrar') }}</div>
 
                 <div class="card-body">

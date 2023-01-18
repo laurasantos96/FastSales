@@ -1,6 +1,5 @@
 <x-layout>
   <x-slot name='title' class="mt-5 pt-5">FastSales - {{__('Revisor')}} Home</x-slot>
-
 @if ($ad)
 
 <div class="container-fluid">

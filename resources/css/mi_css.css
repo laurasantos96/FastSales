@@ -85,28 +85,20 @@ body{
 .mi_nav{
   background: linear-gradient(rgba(167, 128, 64, 0.975),rgba(250, 234, 209, 0.667));
 }
-.mi_card{
+.mi_card, .card_login{
   transition: 0.5s ease-in-out;
   padding: 20px;
   background: rgba(250, 211, 147, 0.347);
   margin-top: 20px;
   border-color: transparent;
-  /* border: solid 3px rgb(252, 225, 180); 
-  box-shadow: 10px 3px 10px 3px rgb(202, 176, 133) inset;*/
-  border-radius: 50px;
+  border-radius: 20px;
 }
 .mi_card:hover{
-  /* padding: 8px;
-  background: rgba(247, 217, 170, 0.518);
-  margin-top: 20px;
-  border-color: transparent;
-  border: solid 3px rgb(252, 225, 180);  */
   transform: scale(1.05);
-  box-shadow: 10px 3px 10px 3px rgb(202, 176, 133);
-
-  /* border-radius: 10px; */
+  box-shadow: 3px 3px 10px 3px rgb(202, 176, 133);
 }
 .mi_boton{
+  transition: 0.5s ease-in-out;
   width: 110px;
   border-radius: 30px;
   border-color: transparent;
@@ -115,7 +107,12 @@ body{
   color: rgb(147, 105, 59);
   font-weight: bold;
   box-shadow: 2px 2px 10px 2px rgb(122, 79, 33) inset;
-  /* text-shadow: 2px 1px 5px rgb(105, 62, 16); */
+}
+.mi_boton:hover{
+  transform: scale(1.05);
+  color: rgb(147, 105, 59);
+  font-weight: bold;
+  box-shadow: 2px 2px 10px 2px rgb(122, 79, 33) inset;
 }
 .mi_img{
   border-radius: 20px;
@@ -133,6 +130,7 @@ body{
   background-color: transparent;
 }
 .borrar_boton{
+  transition: 0.5s ease-in-out;
   width: 110px;
   border-radius: 25px;
   border: transparent;
@@ -142,12 +140,23 @@ body{
   font-weight: bold;
   box-shadow: 2px 2px 10px 2px rgb(219, 33, 33) inset;
 }
+.borrar_boton:hover{
+  transform: scale(1.05);
+  font-weight: bold;
+  box-shadow: 2px 2px 10px 2px rgb(219, 33, 33) inset;
+}
 
 .flag-icon{
-  border-radius: 80%;
+  transition: 0.5s ease-in-out;
+  border-radius: 8%;
 }
 .flag-icon:hover{
-  border-radius: 3%;
+  border-radius: 80%;
+  -webkit-border-radius: 80%;
+  box-shadow: 0px 0px 10px 5px rgb(108, 67, 22);
+  -webkit-box-shadow: 0px 0px 10px 5px rgb(129, 80, 28);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 a.dropdown-item:hover{
   background: rgba(122, 79, 33, 0.445)

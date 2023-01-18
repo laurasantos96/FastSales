@@ -23,7 +23,7 @@
 
   @if (session()->has('message'))
     <x-alert :type="session('message')['type']" :message="session('message')['text']"></x-alert>
-    <p>aceptado</p>
+   
   @endif
 
    {{$slot}} {{-- content o body x_layout--}}
