@@ -37,7 +37,7 @@ class RevisorController extends Controller
     public function rejectAd(Ad $ad)
     {
         $ad->setAccepted(false);
-        return redirect()->back()->withMessage(['type' => 'danger', 'text' => 'Anuncio rechazado']);
+        return redirect()->back()->withMessage(['type' => 'error', 'text' => 'Anuncio rechazado']);
     }
     public function becomeRevisor()
     {

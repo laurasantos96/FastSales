@@ -1,7 +1,5 @@
 import './bootstrap';
-import Swal from 'sweetalert2';
 import { delay } from 'lodash';
-window.Swal = Swal;
 // CommonJS
 
   

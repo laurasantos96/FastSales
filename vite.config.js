@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/sass/app.scss',
                 'resources/sass/mi_css.scss',
                 'resources/js/app.js',
+                'resources/js/sweetAlert2.js'
             ],
             refresh: true,
         }),

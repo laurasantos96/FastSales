@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="{{ asset('/img/icono.png') }}">
   <title> {{ $title ?? 'FastSales'}}</title>
+  {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.0/sweetalert2.min.js"></script>
+  {{-- <script src="sweetalert2.all.min.js"></script> --}}
+
 
  @livewireStyles
 
-  @vite(['resources/css/app.css','resources/css/mi_css.css'])
+  @vite(['resources/css/app.css','resources/css/mi_css.css','resources/js/sweetAlert2.js'])
 
   {{ $style ?? ''}}
 
@@ -19,6 +23,7 @@
 
   @if (session()->has('message'))
     <x-alert :type="session('message')['type']" :message="session('message')['text']"></x-alert>
+    <p>aceptado</p>
   @endif
 
    {{$slot}} {{-- content o body x_layout--}}
