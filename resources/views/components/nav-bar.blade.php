@@ -32,7 +32,7 @@
             
                           <span class="input-group-text" id="search-addon">
                             <i class="bi bi-search me-2">
-                            <input type="search" name="q" value=" Search..." class="me-2 mi_search"></i>
+                            <input type="search" name="q" placeholder="{{__('Buscar...')}}" class="me-2 mi_search"></i>
                           </span>
                         </form>
                      

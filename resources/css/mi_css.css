@@ -165,10 +165,12 @@ a.dropdown-item:hover{
   background-color: transparent;
   border: 5px solid transparent;
   border-radius: 10px;
+  outline: none;
 }
 #search-addon{
   border-radius: 20px;
 }
+
 .mi_icono{
   transition: 0.5s ease-in-out;
   color:rgb(3, 3, 3);
