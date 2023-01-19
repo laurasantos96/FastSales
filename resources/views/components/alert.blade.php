@@ -7,7 +7,7 @@
             title: '{{ $message }}',
             icon: '{{ $type }}',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         })
         // se importa la clase en app.js
     </script>

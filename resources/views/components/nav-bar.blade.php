@@ -22,19 +22,20 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link  nav_letra" href="{{ route('login') }}">{{ __('Contacto') }}</a>
+                        <a class="nav-link  nav_letra" href="{{ route('contact') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link  nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">
-                          
-                          <span class="input-group-text border-0" id="search-addon">
-                            <i class="bi bi-search"></i>
-                            <input type="search" name="q" class="mi_search" placeholder=" Search..." aria-label="Search">
+            
+                          <span class="input-group-text" id="search-addon">
+                            <i class="bi bi-search me-2">
+                            <input type="search" name="q" value=" Search..." class="me-2 mi_search"></i>
                           </span>
                         </form>
+                     
                     </li>
                 </ul>
 

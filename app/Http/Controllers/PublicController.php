@@ -33,4 +33,7 @@ class PublicController extends Controller
              ->paginate();
              return view('ad.results', compact('q','ads'));
     }
+    public function show (){
+        return view('contact');
+    }
 }

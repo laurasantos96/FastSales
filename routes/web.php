@@ -36,4 +36,5 @@ Route::get('/revisor/{user}/make', [RevisorController::class, 'makeRevisor'])->m
 
 Route::post('/locale/{locale}',[PublicController::class,'setLocale'])->name('locale.set');
 Route::get('/search',[PublicController::class,'search'])->name('search');
-//Route::get('/ads/{ad}', [PublicController::class, 'search'])->name('ads.results');
+
+Route::get('/contact',[PublicController::class, 'show'])->name('contact');
