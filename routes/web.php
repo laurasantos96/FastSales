@@ -40,5 +40,6 @@ Route::get('/search',[PublicController::class,'search'])->name('search');
 
 Route::get('/contact',[PublicController::class, 'show'])->name('contact');
 
-Route::delete('/ads/{ad}', [PanelController::class, 'destroy'])->name('panel.destroy');
-Route::get('/show', [PanelController::class, 'show'])->name('panel.show');
+
+Route::get('/dashboard', [PanelController::class, 'index'])->name('panel.index');
+Route::delete('/ads/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');

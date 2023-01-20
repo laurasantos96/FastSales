@@ -22,4 +22,10 @@ public function show (Ad $ad){
     return view('ad.show',compact('ad'));
 }
 
+public function destroy ($id){
+    $ad = Ad::find($id);
+    //dd($ad);
+    $ad->delete();
+    return redirect()->back()->withMessage(['type' => 'success', 'text' => 'Anuncio borrado']);
+}
 }

@@ -27,9 +27,7 @@
                     <li class="nav-item">
                         <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav_letra" href="{{ route('panel.show') }}">{{ __('Panel') }}</a>
-                    </li>
+                  
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">
             
@@ -85,9 +83,12 @@
                                       </li>
                                   @endif
                             <li>
+                                <a class="dropdown-item nav_letra" href="{{ route('panel.index') }}">{{ __('Mi perfil') }}</a>
+                            </li>     
+                            <li>
                                 <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
                                 </a>
-                            </li>    
+                            </li>   
                             </div>
                           
                         </li>
