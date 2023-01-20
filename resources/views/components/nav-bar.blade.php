@@ -22,10 +22,13 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link  nav_letra" href="{{ route('contact') }}">{{ __('Contacto') }}</a>
+                        <a class="nav-link nav_letra" href="{{ route('contact') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+                        <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav_letra" href="{{ route('panel.show') }}">{{ __('Panel') }}</a>
                     </li>
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">

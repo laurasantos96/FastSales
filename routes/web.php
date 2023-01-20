@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 
@@ -38,3 +39,6 @@ Route::post('/locale/{locale}',[PublicController::class,'setLocale'])->name('loc
 Route::get('/search',[PublicController::class,'search'])->name('search');
 
 Route::get('/contact',[PublicController::class, 'show'])->name('contact');
+
+Route::delete('/ads/{ad}', [PanelController::class, 'destroy'])->name('panel.destroy');
+Route::get('/show', [PanelController::class, 'show'])->name('panel.show');
