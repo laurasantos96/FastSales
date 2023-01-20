@@ -1,12 +1,10 @@
 .nav_letra{
   font-family:'Lucida Grande';
   color: rgb(142, 91, 36);
-  font-size: large;
+  font-size: 15px;
 }
-
 .nav_letra:hover{
   font-family: 'Lucida Grande';
-  font-size: larger;
   font-weight: bold;
   color: rgb(122, 79, 33);
 }
@@ -55,6 +53,9 @@ a.page-link,.disabled > .page-link {
 .titulo_letra{
   color: rgb(105, 62, 16);
 }
+/* .container{
+  background-color: rgb(30, 131, 51);
+} */
 body{
   background-color:rgb(250, 234, 209);
   padding-bottom: 8%;
@@ -162,13 +163,27 @@ a.dropdown-item:hover{
   background: rgba(122, 79, 33, 0.445);
 }
 .mi_search{
-  background-color: transparent;
   border: 5px solid transparent;
   border-radius: 10px;
   outline: none;
+  background-color: bisque;
+  background-image: url(/public/img/search.png);
+  background-repeat: no-repeat;
+  background-position:right;
+  height: 25px;
+  
 }
 #search-addon{
   border-radius: 20px;
+  background-color: rgb(255, 234, 199);
+  width: 20%;
+  height: 30px;
+}
+#search-addon:hover{
+  border-radius: 20px;
+  background-color: rgb(255, 234, 199);
+  width: 100%;
+  height: 30px;
 }
 
 .mi_icono{

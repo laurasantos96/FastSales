@@ -30,11 +30,7 @@
                   
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">
-            
-                          <span class="input-group-text" id="search-addon">
-                            <i class="bi bi-search me-2">
-                            <input type="search" name="q" placeholder="{{__('Buscar...')}}" class="me-2 mi_search"></i>
-                          </span>
+                            <input type="search" name="q" class="me-2 mi_search" placeholder="{{__('Buscar...')}}">
                         </form>
                      
                     </li>

@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="mi_footer text-center fixed-bottom">
-     <div class="d-none d-lg-block">
+     <div class="">
         <span class="me-3 mi_letra">Get connected with us on social networks: </span>
           <a href="https://github.com/geannyna?tab=repositories" > <img src="{{ asset ('/img/github.png')}}" class="mi_icono me-3"></a>
           <a href="https://web.whatsapp.com/" > <img src="{{ asset ('/img/whatsapp.png')}}" class="mi_icono me-3"></a>
