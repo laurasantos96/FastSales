@@ -30,7 +30,12 @@
                   
                     <li>
                         <form action="{{route('search')}}" method="GET" role="search">
-                            <input type="search" name="q" class="me-2 mi_search" placeholder="{{__('Buscar...')}}">
+                           
+                            <div class="input-group">
+                                <input type="search" name="q" placeholder="{{__('Buscar...')}}" class="mi_search">
+                                   <button class="mi_search"> <img src="{{asset('img/search.png')}}">
+                                </button>
+                            </div>
                         </form>
                      
                     </li>
