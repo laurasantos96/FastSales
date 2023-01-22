@@ -182,30 +182,6 @@ a.dropdown-item:hover{
   transform: rotateY(180deg);
   transform-style: preserve-3d;
 }
-.mi_icono1{
-  transition: 0.5s ease-in-out;
-  width: 70%;
-  padding: 5%;
-  /* border: 2px solid black; */
-  border-radius: 5px;
-}
-.mi_icono1:hover{
-  width: 100%;
-  padding: 9%;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  box-shadow: 0px 0px 15px 15px rgb(101, 73, 43);
-  -webkit-box-shadow: 0px 0px 20px 7px rgb(101, 73, 43);
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-}
-.mi_contact{
-  width: 80%;
-  
-}
-.contact_a{
-  border-width: 50%;
-  height: 50%;
-}
+
 
 

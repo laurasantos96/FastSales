@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RevisorController;
 
 
@@ -38,7 +39,8 @@ Route::get('/revisor/{user}/make', [RevisorController::class, 'makeRevisor'])->m
 Route::post('/locale/{locale}',[PublicController::class,'setLocale'])->name('locale.set');
 Route::get('/search',[PublicController::class,'search'])->name('search');
 
-Route::get('/contact',[PublicController::class, 'show'])->name('contact');
+Route::get('/contact',  [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact');
 
 
 Route::get('/dashboard', [PanelController::class, 'index'])->name('panel.index');
