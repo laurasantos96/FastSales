@@ -10,15 +10,15 @@
         </div>
         <div class="row mt-2">
             @forelse($ads as $ad)
-            <div class="col-12 col-md-4">
-                <div class="card mb-5 mi_card">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="card mb-3 mi_card" style="width: 18rem;">
                  <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150'}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"> {{$ad->title}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">€ {{$ad->price}}</h6>
                         <p class="card-text"> {{$ad->body}}</p>
                         <div class="card-subtitle mb-2">
-                            <strong><a href="{{route('category.ads',$ad->category)}}">#{{__($ad->category->name)}}</a></strong>
+                            <a href="{{route('category.ads',$ad->category)}}" class="text-decoration-none nav_letra">#{{__($ad->category->name)}}</a>
                             <i>{{$ad->created_at->format('d/m/Y')}}</i>
                         </div>
                         <div class="card-subtitle mb-2">

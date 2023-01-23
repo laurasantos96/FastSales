@@ -23,7 +23,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">€ {{$ad->price}}</h6>
                         <p class="card-text"> {{$ad->body}}</p>
                         <div class="card-subtitle mb-2">
-                            <strong><a href="{{route('category.ads',$ad->category)}}">#{{$ad->category->name}}</a></strong>
+                            <a href="{{route('category.ads',$ad->category)}}" class="text-decoration-none nav_letra">#{{$ad->category->name}}</a>
                             <i>{{$ad->created_at->format('d/m/Y')}}</i>
                         </div>
                         <div class="card-subtitle mb-2">
