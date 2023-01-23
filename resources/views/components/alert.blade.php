@@ -17,6 +17,9 @@
         {{__($message)}}
     </div>
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </div>
 {{-- controlamos los mesajes de aceptar y todos los demas --}}
