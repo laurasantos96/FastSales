@@ -1,5 +1,6 @@
     <nav class="navbar mi_nav navbar-expand-lg fixed-top">
         <div class="container">
+          
             <a class="navbar-brand nav_letra fs-4" href="{{ url('/') }}">
              <img src="{{ asset ('/img/icono.png')}}" style="height: 2em">{{'FastSales'}}
             </a>
@@ -25,7 +26,15 @@
                         <a class="nav-link nav_letra" href="{{ route('contact') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< Updated upstream
                         <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+=======
+                        <a class="nav-link  nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+                      
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
                     </li>
                   
                     <li>
