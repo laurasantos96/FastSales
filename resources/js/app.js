@@ -1,4 +1,5 @@
 import './bootstrap';
+<<<<<<< Updated upstream
 import { delay } from 'lodash';
 // CommonJS
 
@@ -28,4 +29,13 @@ import { delay } from 'lodash';
 //     timer: 1500
 //     })
 // }
+=======
+import Swal from 'sweetalert2';
+
+window.Swal = Swal;
+// CommonJS
+
+  
+
+>>>>>>> Stashed changes
   
