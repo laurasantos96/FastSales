@@ -78,6 +78,10 @@
                                 </div>
                             @endforeach
                         </div>
+<<<<<<< HEAD
+=======
+                        
+>>>>>>> modificar
     
                     </div>
                 </div>
