@@ -29,13 +29,14 @@
                     </li>
                   
                     <li>
+                        
                         <form action="{{route('search')}}" method="GET" role="search">
-                           
-                            <div class="input-group">
+                           <div class="input_group">
+                            
                                 <input type="search" name="q" placeholder="{{__('Buscar...')}}" class="mi_search">
-                                   <button class="mi_search"> <img src="{{asset('img/search.png')}}">
-                                </button>
-                            </div>
+                                    <i class="bi btn_search bi-search">    
+                                    </i>
+                         </div>   
                         </form>
                      
                     </li>

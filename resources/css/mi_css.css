@@ -163,14 +163,6 @@ body{
 a.dropdown-item:hover{
   background: rgba(122, 79, 33, 0.445);
 }
-.mi_search{
-  border: 5px solid transparent;
-  border-radius: 10px;
-  outline: none;
-  background-color: bisque;
-  height: 35px;
-  
-}
 .mi_icono{
   transition: 0.5s ease-in-out;
   color:rgb(3, 3, 3);
@@ -182,6 +174,34 @@ a.dropdown-item:hover{
   transform: rotateY(180deg);
   transform-style: preserve-3d;
 }
+.mi_search{
+  border: 5px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  height: 35px;
+  width: 250px;
+  background-color:rgb(250, 234, 209);
+}
+.input_group{
+  position: absolute;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 300px;
+  background-color:rgb(250, 234, 209);
+}
+
+.btn_search{
+  position: absolute;
+  right: 1px;
+  margin-top: 5px;
+  width: 30px;
+}
+.mi_search:focus{
+  background-color:rgb(250, 234, 209);
+}
+
+
+
 
 
 
