@@ -45,3 +45,6 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact');
 
 Route::get('/dashboard', [PanelController::class, 'index'])->name('panel.index');
 Route::delete('/ads/{ad}', [AdController::class, 'destroy'])->name('ad.destroy');
+
+Route::get('/ads/edit/{ad}', [AdController::class, 'edit'])->name ('ad.edit');
+Route::put('/ads/edit/{ad}', [AdController::class, 'update'])->name ('ad.update');

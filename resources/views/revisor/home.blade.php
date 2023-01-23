@@ -128,7 +128,8 @@
 </div>
 </div>
 @else
-  <h3 class="text-center titulo_letra">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
-
+<div class="d-flex justify-content-center">
+  <h3 class="titulo_letra mt-5 w-75">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
+</div>
 @endif
 </x-layout>

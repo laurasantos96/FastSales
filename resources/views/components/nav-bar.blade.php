@@ -96,6 +96,7 @@
                         </li>
                     </ul>
                     @endguest
+                  
                         <a class="nav-link me-2" href="">
                             <x-locale lang="es" country="es"></x-locale>
                         </a>
@@ -106,7 +107,8 @@
                   
                         <a class="nav-link" href="">
                             <x-locale lang="it" country="it"></x-locale>
-                        </a>                
+                        </a>  
+                               
                 </ul>
             </div>
         </div>
