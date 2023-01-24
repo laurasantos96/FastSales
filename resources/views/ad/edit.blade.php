@@ -73,15 +73,12 @@
                             @foreach ($ad->images as $key=>$ad->image)
                                 <div class="col-12 col-md-4">
                                     <img src="{{$ad->image->getUrl(400,300)}}" alt="" class="img-fluid">
-                                    <img src="{{$ad->image->temporaryUrl()}}" alt="" class="img-fluid">
+                                    {{-- <img src="{{$ad->image->temporaryUrl()}}" alt="" class="img-fluid"> --}}
                                     <button type="button" class="borrar_boton mt-2" wire:click="removeImage({{$key}})">{{__('Eliminar')}}</button>
                                 </div>
                             @endforeach
                         </div>
-<<<<<<< HEAD
-=======
                         
->>>>>>> modificar
     
                     </div>
                 </div>
