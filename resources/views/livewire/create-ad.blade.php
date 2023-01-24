@@ -79,7 +79,7 @@
             
         @endif
         <div class="d-flex justify-content-center">
-            <button type="submit" class="mi_boton mb-3">{{__('Crear')}}</button>
+            <button type="submit" class="mi_boton mb-3 mt-2">{{__('Crear')}}</button>
         </div>  
         
     </form> 

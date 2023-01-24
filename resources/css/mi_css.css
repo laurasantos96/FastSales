@@ -50,6 +50,13 @@ a.page-link,.disabled > .page-link {
   color: rgb(122, 79, 33);
   text-decoration: none;
 }
+.precio_letra{
+  font-family:sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(197, 44, 44);
+  text-decoration: none;
+}
 .titulo_letra{
   color: rgb(105, 62, 16);
 }
@@ -122,7 +129,7 @@ body{
 }
 .mi_carousel{
   height: 100%;
-  width: 30%;
+  width: 500px;
   border: 5px solid rgb(105, 62, 16);
   border-radius: 35px;
   background-color: transparent;

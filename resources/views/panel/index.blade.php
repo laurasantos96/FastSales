@@ -2,7 +2,7 @@
 
   
   <x-slot name='title'>FastSales - {{__('Mis anuncios')}}</x-slot>
-  <div class="container mt-5">
+  <div class="container mt-2">
       <div class="row">
           <div class="col-12">
               <h1 class="text-center titulo_letra">{{__('Mis anuncios:')}}</h1>

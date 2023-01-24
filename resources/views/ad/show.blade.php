@@ -1,6 +1,6 @@
 <x-layout>
-  <div class="row">
-    <div class="d-flex justify-content-center mt-3">
+  <div class="row p-5">
+    <div class="d-flex justify-content-center mt-5">
     <div id="adImage" class="carousel slide carousel-fade mi_carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
         @for ($i = 0; $i < $ad->images()->count(); $i++)
@@ -24,11 +24,11 @@
       </button>
     </div>
   </div>
-  <div class="row d-flex justify-content-center mt-5">
-    <div class="col-12 col-md-6">
-      <div><b>{{__('Titulo: ')}}</b>{{$ad->title}}</div>
-      <div><b>{{__('Precio: ')}}</b>{{$ad->price}}</div>
-      <div><b>{{__('Descripcion: ')}}</b>{{$ad->body}}</div>
+  <div class="d-flex justify-content-center mt-5">
+    <div class="">
+      <div class="fs-2"><b>{{$ad->title}}</b></div>
+      <div class="precio_letra">{{$ad->price}} €</div>
+      <div><h4>{{$ad->body}}</h4></div>
       <div><b>{{__('Publicado el: ')}}</b>{{$ad->created_at->format('d/m/Y')}}</div>
       <div><b>{{__('Por: ')}}</b>{{$ad->user->name}}</div>
       <div class="mb-3">
@@ -38,4 +38,5 @@
     </div>
   </div>
 </div>
+
 </x-layout>

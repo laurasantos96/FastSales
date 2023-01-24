@@ -128,7 +128,7 @@
 </div>
 </div>
 @else
-  <h3 class="text-center titulo_letra">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
+  <h3 class="text-center titulo_letra mt-5">{{__('Ya no hay anuncios para revisar,gracias.')}}</h3>
 
 @endif
 </x-layout>

@@ -30,13 +30,13 @@
             </div>
             @empty
             <div class="col-12">
-                  <h2>{{__('Uyy.. parece que no hay nada')}}</h2>
-                  <a href="{{route('ads.create')}}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a>{{__('o')}} <a href="{{route('home')}}" class="btn btn-primary ms-3">{{__('Vuelve a la home')}}</a> 
+                  <p class="mi_letra fs-3">{{__('Uyy.. parece que no hay nada')}}</p>
+                  <a href="{{route('ads.create')}}" class="btn btn-success me-3">{{__('Vende tu primer objeto ')}}</a>{{__(' o')}} <a href="{{route('home')}}" class="btn btn-primary ms-3">{{__('Vuelve a la home')}}</a> 
               </div>
             @endforelse
         </div>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mb-5">
         {{-- {{$ads->links()}}  --}}
         {{$ads->links()}} 
     </div>
