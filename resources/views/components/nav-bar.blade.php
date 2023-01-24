@@ -60,7 +60,7 @@
                             </li>
                         @endif
                     @else
-                    <a href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra">{{__('Crear anuncio')}}</a>
+                    <a href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra text-success fs-5">{{__('Crear anuncio')}}</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle nav_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}

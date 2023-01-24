@@ -78,10 +78,10 @@ body{
   color: yellow;
 }
 .LIKELY{
-  color: red;
+  color: orange;
 }
 .VERY_LIKELY{
-  color: orange;
+  color: red;
 }
 .UNKNOWN{
   color: grey;
