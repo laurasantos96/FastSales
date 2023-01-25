@@ -18,17 +18,19 @@
                       <h6 class="card-subtitle mb-2 text-muted">€ {{$ad->price}}</h6>
                       <p class="card-text"> {{$ad->body}}</p>
                      <div class="card-subtitle mb-2">
-                           <strong><a href="{{route('category.ads',$ad->category)}}">#{{__($ad->category->name)}}</a></strong>  
+                           <a href="{{route('category.ads',$ad->category)}}" class="text-decoration-none nav_letra">#{{__($ad->category->name)}}</a> 
                           <i>{{$ad->created_at->format('d/m/Y')}}</i>
                       </div>
-                    {{--  
-                       <a href="{{route("panel.destroy",$ad)}}" class="text-decoration-none nav_letra mi_boton">{{__('Borrar')}}</a> --}}
+                    {{--   dashboard  --}}
+                    <div class="d-flex justify-content-center mt-4">
                        <form method="POST" action="{{route("ad.destroy",$ad->id)}}">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="text-decoration-none nav_letra mi_boton">{{__('Borrar')}}</button>
+                        <button type="submit" class="text-decoration-none nav_letra borrar_boton me-3">{{__('Borrar')}}</button>
                       </form>
-                       
+                        <a href="{{route ('ad.edit',$ad)}} " class="text-decoration-none nav_letra mi_boton">{{__('Modificar')}}</a>
+                     
+                     </div> 
                   </div>
               </div>
           </div>

@@ -1,8 +1,8 @@
 <!-- Footer -->
 <footer class="mi_footer text-center fixed-bottom">
-  <span class="me-3 mi_letra">Get connected with us on social networks: </span>
-     <div class="col-12">
-        
+     
+        <span class="me-3 mi_letra">Get connected with us on social networks: </span>
+      <div class="col-12">  
           <a href="https://github.com/geannyna?tab=repositories" > <img src="{{ asset ('/img/github.png')}}" class="mi_icono me-3"></a>
           <a href="https://web.whatsapp.com/" > <img src="{{ asset ('/img/whatsapp.png')}}" class="mi_icono me-3"></a>
           <a href="https://discord.com/channels/846683685565497344/994234179598422047" > <img src="{{ asset ('/img/discord.png')}}" class="mi_icono me-3"></a>

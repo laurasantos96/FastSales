@@ -1,5 +1,6 @@
     <nav class="navbar mi_nav navbar-expand-lg fixed-top">
         <div class="container">
+          
             <a class="navbar-brand nav_letra fs-4" href="{{ url('/') }}">
              <img src="{{ asset ('/img/icono.png')}}" style="height: 2em">{{'FastSales'}}
             </a>
@@ -25,7 +26,9 @@
                         <a class="nav-link nav_letra" href="{{ route('contact') }}">{{ __('Contacto') }}</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link nav_letra" href="{{ route('revisor.become') }}">{{ __('Trabaja con nosotros') }}</a>
+            
                     </li>
                   
                     <li>
@@ -96,6 +99,7 @@
                         </li>
                     </ul>
                     @endguest
+                  
                         <a class="nav-link me-2" href="">
                             <x-locale lang="es" country="es"></x-locale>
                         </a>
@@ -106,7 +110,8 @@
                   
                         <a class="nav-link" href="">
                             <x-locale lang="it" country="it"></x-locale>
-                        </a>                
+                        </a>  
+                               
                 </ul>
             </div>
         </div>

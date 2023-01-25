@@ -1,11 +1,12 @@
 .nav_letra{
   font-family:'Lucida Grande';
   color: rgb(82, 52, 21);
-  font-size: 15px;
+  font-size: medium;
 }
 .nav_letra:hover{
   font-family: 'Lucida Grande';
   font-weight: bold;
+  font-size: 18px;
   color: rgb(122, 79, 33);
 }
  .pagination ul,.pagination a.page-link{
@@ -92,7 +93,7 @@ body{
 }
 .mi_nav{
   background: linear-gradient(rgba(167, 128, 64, 0.975),rgba(254, 234, 201, 0.959));
-  
+ 
 }
 .mi_card, .card_login{
   transition: 0.5s ease-in-out;
@@ -158,6 +159,7 @@ body{
 .flag-icon{
   transition: 0.5s ease-in-out;
   border-radius: 8%;
+ 
 }
 .flag-icon:hover{
   border-radius: 80%;

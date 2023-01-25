@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="row p-5">
+  <div class="row">
     <div class="d-flex justify-content-center mt-5">
     <div id="adImage" class="carousel slide carousel-fade mi_carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
