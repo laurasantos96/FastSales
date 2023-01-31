@@ -46,14 +46,7 @@ class RevisorController extends Controller
     public function makeRevisor(User $user)
     {
         Artisan::call('fast:makeUserRevisor',['email' => $user->email]);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
         return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Felicidades!Ya eres revisor.']);
-=======
-        return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud aceptada con éxito, gracias.']);
->>>>>>> Stashed changes
-=======
-        return redirect()->route('home')->withMessage(['type' => 'success', 'text' => 'Solicitud aceptada con éxito, gracias.']);
->>>>>>> Stashed changes
     }
 }
